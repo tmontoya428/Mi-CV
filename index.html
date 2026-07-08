@@ -21,6 +21,7 @@
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -547,12 +548,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/isotope-layout/3.0.6/isotope.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqBootstrapValidation/1.3.7/jqBootstrapValidation.min.js"></script>
-    <script src="https://htmlcodex.com/scripts/contact.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jqBootstrapValidation/1.3.7/jqBootstrapValidation.min.js"></script>-->
+    <!--<script src="https://htmlcodex.com/scripts/contact.js"></script>-->
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-        emailjs.init('TU_PUBLIC_KEY');
+        emailjs.init('oEOHEpnR9p4cIFstK');
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -574,15 +575,18 @@
             statusMessage.textContent = 'Enviando...';
             statusMessage.style.color = '#333';
 
-            emailjs.send('TU_SERVICE_ID', 'TU_TEMPLATE_ID', templateParams)
-                .then(function(response) {
-                    statusMessage.textContent = '¡Mensaje enviado con éxito!';
-                    statusMessage.style.color = 'green';
-                    document.getElementById('contact-form').reset();
-                }, function(error) {
-                    statusMessage.textContent = 'Error al enviar el mensaje. Inténtalo de nuevo.';
-                    statusMessage.style.color = 'red';
-                });
+            emailjs.send(
+    'service_7i55mzg',
+    'template_3msiwky',
+    templateParams
+)
+.then(function () {
+    statusMessage.textContent = 'Mensaje enviado';
+})
+.catch(function (error) {
+    console.log(error);
+    alert(JSON.stringify(error));
+});
         });
     </script>
 </body>
