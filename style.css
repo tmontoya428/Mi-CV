@@ -241,7 +241,7 @@ a:hover, a:active, a:focus { color: #343a40; outline: none; text-decoration: non
 
 #home .col-lg-5 {
     position: absolute; right: 0; top: 0; width: 480px; max-width: 480px; height: 100%;
-    background: linear-gradient(180deg, #6c63d6 0%, #8D86C9 100%);
+    background: linear-gradient(180deg, #575755 0%, #a3a3a2 100%);
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     padding: 60px 35px !important; z-index: 2;
 }
@@ -308,8 +308,8 @@ a:hover, a:active, a:focus { color: #343a40; outline: none; text-decoration: non
 }
 #home .d-flex a { color: #fff; text-decoration: underline; }
 
-#home.bg-primary { background: linear-gradient(135deg, #B76E79 0%, #8D86C9 100%) !important; }
-.footer-bg, .container-fluid.bg-primary { background: linear-gradient(135deg, #B76E79 0%, #8D86C9 100%) !important; }
+#home.bg-primary { background: linear-gradient(135deg, #575755 0%, #a3a3a2 100%) !important; }
+.footer-bg, .container-fluid.bg-primary { background: linear-gradient(135deg, #575755 0%, #a3a3a2 100%) !important; }
 
 .reveal-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal-up.reveal-visible { opacity: 1; transform: translateY(0); }
